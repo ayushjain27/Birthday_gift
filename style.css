@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Josefin Slab", serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0 , 0, .3 )), url(images/WhatsApp\ Image\ 2021-11-23\ at\ 05.26.10\ \(7\).jpeg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 260px;
+    height: 460px;
+    /* background-color: #eee; */
+    position: relative;
+    perspective: 1000px;
+}
+
+.left-side{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0 , 0, .3 )), url(images/WhatsApp\ Image\ 2021-11-23\ at\ 05.26.10\ \(9\).jpeg);
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+    background-position-x: -50px;
+    transform: rotateY(0deg);
+    transform-origin: left;
+    transition: transform 1s;
+}
+
+.right-side{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0 , 0, .3 )), url(images/WhatsApp\ Image\ 2021-11-23\ at\ 05.26.10\ \(9\).jpeg);
+    background-size: cover;
+    background-position-x: -180px;
+    transform: rotateY(0deg);
+    transform-origin: right;
+    transition: transform 1s;
+}
+
+.back-side{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 74px;
+    flex-direction: column;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0 , 0, .3 )), url(images/WhatsApp\ Image\ 2021-11-23\ at\ 05.15.56\ \(2\).jpeg) center no-repeat;
+    background-size: cover;
+    z-index: -1;
+    transform: z-index .4s step-end  translateZ(-300px);
+}
+
+.title{
+    color: wheat;
+    font-size: 42px;
+    background-color: rgba(223, 178 , 205, .05 );
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+    color: #5769c5;
+    font-weight: 800;
+}
+
+.Sudha{
+    font-family: 'Estonia';
+    font-size: 42px;
+    background: -webkit-linear-gradient(#110ee1, #332c2e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.img{
+    height: 40%;
+    width: 70%;
+}
+
+.back-side1{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0 , 0, .3 )), url(images/WhatsApp\ Image\ 2021-11-23\ at\ 05.24.11.jpeg) center no-repeat; */
+    /* background-size: cover; */
+    z-index: -1;
+    transform: z-index .4s step-end  translateZ(-500px);
+}
+
+.Sudha1{
+    width: 100%;
+    height: 100%;
+}
+
+.back-side2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0 , 0, .3 )), url(images/WhatsApp\ Image\ 2021-11-23\ at\ 05.24.11.jpeg) center no-repeat; */
+    /* background-size: cover; */
+    /* background-color: red; */
+    z-index: -1;
+    transform: z-index .4s step-end  translateZ(-500px);
+}
+
+.Sudha2{
+    width: 100%;
+    height: 100%;
+}
+
+.card:hover .left-side{
+    transform: rotateY(-360deg);
+}
+
+.card:hover .right-side{
+    transform: rotateY(360deg);
+}
+
+.card:hover .back-side{
+    transform: translateZ(0px);
+    z-index: 1;
+}
+
+.card:hover .back-side1{
+    transform: translateZ(0px);
+    transition-delay: 1s;
+    z-index: 1;
+}
+
+.card:hover .back-side2{
+    transform: translateZ(0px);
+    transition-delay: 2s;
+    z-index: 1;
+}
